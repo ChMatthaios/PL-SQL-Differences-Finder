@@ -1,17 +1,17 @@
 DECLARE
-    string1      VARCHAR2 (100);
-    string2      VARCHAR2 (100);
-    diff_count   NUMBER := 0;
+    string1        VARCHAR2 (100);
+    string2        VARCHAR2 (100);
+    diff_count     NUMBER := 0;
 BEGIN
     SELECT varchar_column
-    INTO string1
-    FROM schema.table_name_1
-    WHERE condition;
+      INTO string1
+      FROM schema.table_name_1
+     WHERE condition;
 
     SELECT varchar_column
-    INTO string2
-    FROM schema.table_name_1
-    WHERE condition;
+      INTO string2
+      FROM schema.table_name_1
+     WHERE condition;
 
     -- loop through each character in the strings
     FOR i IN 1 .. LEAST (LENGTH (string1), LENGTH (string2))
